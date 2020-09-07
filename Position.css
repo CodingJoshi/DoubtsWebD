@@ -1,0 +1,27 @@
+.box{
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+    padding: 10px;
+    display: inline-block;
+    border: black dashed 2px;
+    color: white;
+}
+.one{
+    background-color: black;
+}
+.two{
+    background-color: red;
+}
+.three{
+    background-color: orange;
+}
+.four{
+    background-color: blue;
+}
+.five{
+    background-color: pink;
+}
+.six{
+    background-color: orchid;
+}
