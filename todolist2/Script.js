@@ -45,7 +45,7 @@ $(document).ready(function () {
     btnAdd.click(addItem);
 
     inpTask.keypress((event)=>{
-        console.log(event.which);
+        // console.log(event.which);
         if(event.which==13)addItem();
     })
 

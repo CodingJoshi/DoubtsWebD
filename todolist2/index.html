@@ -17,16 +17,22 @@
         <h1>Todo Lists</h1>
       <div class="alert alert-danger" id="errMsg" role="alert">Please Enter Some Task To Add</div>
       <div class="row" style="margin-top: 10px;">
-        <div class="col col-md-7">
+        <div class="col-lg-7">
           <input type="text" class="form-control " id="inpTask" placeholder="Enter a task">
         </div>
-        <div class="col col-md-5">
+        <div class="col-lg-5" id="allBtn">
           <button type="button" id="btnAdd" class="btn btn-success">
-            <i class="fa fa-plus-circle"></i>
+            <i class="fa fa-plus-square"></i>
             Add</button>
           <button type="button" id="btnClear" class=" btn btn-danger">
             <i class="fa fa-times-circle"></i>
             Clear</button>
+            <button id="btnSort" type="button" class="btn btn-danger">
+              <i class="fa fa-sort-amount-asc"></i>
+              All</button>
+            <button id="btnDone" type="button" class="btn btn-danger"> 
+              <i class="fa fa-trash"></i>
+              Done</button>
         </div>
       </div>
       
@@ -34,12 +40,7 @@
         <div class="col col-md-7 ">
         </div>
         <div class="col col-md-5 ">
-          <button id="fabtn" type="button" class="btn btn-danger">
-            <i class="fa fa-trash"></i>
-            All</button>
-          <button id="fabtn" type="button" class="btn btn-danger"> 
-            <i class="fa fa-trash"></i>
-            Done</button>
+          
         </div>
       </div>
 

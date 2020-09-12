@@ -5,6 +5,9 @@
     font-weight: bold;
     display: none;
 }
+#allBtn{
+    display: flex;
+}
 #btnTrash{
     float: right;
     border: none;
@@ -27,7 +30,11 @@
 #ulTasks{
     margin: 20px;
 }
-#fabtn i,#btnAdd i,#btnClear i{
+#btnDone,#btnSort,#btnAdd,#btnClear,#inpTask{
+    margin: 20px auto;
+    font-weight: bolder;
+}
+#btnDone i,#btnSort i,#btnAdd i,#btnClear i{
     font-size: 25px;
 }
 li.done{
