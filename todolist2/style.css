@@ -1,0 +1,36 @@
+#errMsg{
+    color: red;
+    text-align:center;
+    font-size: 20px;
+    font-weight: bold;
+    display: none;
+}
+#btnTrash{
+    float: right;
+    border: none;
+    background:none;
+}
+#btnTrash i{
+    color: red;
+    border: none;
+    z-index: 5;
+}
+#btnTrash:focus{
+    outline: none;
+}
+#liItem{
+    z-index: 0;
+    padding: 5px;
+    font-size: 20pt;
+    text-align: center;
+}
+#ulTasks{
+    margin: 20px;
+}
+#fabtn i,#btnAdd i,#btnClear i{
+    font-size: 25px;
+}
+li.done{
+    color: #6c757d;
+    text-decoration: line-through;
+}
