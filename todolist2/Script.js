@@ -6,39 +6,50 @@
         </button> 
     </li>
 </ul> */}
-$(document).ready(function() {
-let ulTasks=$('#ulTasks');
-let btnAdd=$('#btnAdd');
-let btnClear=$('#btnClear');
-let inpTask=$('#inpTask');
-btnAdd.click((event)=>{
-    if(inpTask.val()==''){
-        console.log("err");
-        $('#errMsg').css('display','block');
-        return;
-    }
-   $('#errMsg').css('display','none');
-    let liItem=$('<li>')
-        .attr("id","liItem")
-        .addClass("list-group-item")
-        .text(inpTask.val())
-        .append(
-            $('<button>')
-            .attr('id','btnTrash')
+$(document).ready(function () {
+    let ulTasks = $('#ulTasks');
+    let btnAdd = $('#btnAdd');
+    let btnClear = $('#btnClear');
+    let inpTask = $('#inpTask');
+    function addItem() {
+        if (inpTask.val() == '') {
+            console.log("err");
+            $('#errMsg').css('display', 'block');
+            return;
+        }
+        $('#errMsg').css('display', 'none');
+        let liItem = $('<li>')
+            .attr("id", "liItem")
+            .addClass("list-group-item")
+            .text(inpTask.val())
             .append(
-            $('<i>')
-            .addClass('fa fa-trash')
+                $('<button>')
+                    .attr('id', 'btnTrash')
+                    .append(
+                        $('<i>')
+                            .addClass('fa fa-trash')
+                    )
             )
-        )
-    liItem.click(()=>{
-        liItem.toggleClass('done');
+        liItem.click(() => {
+            liItem.toggleClass('done');
+        })
+        // WHAT SHOULD I HAVE OT WRITE HERE
+        // btnTrash.click(() => {
+        //     console.log('clickde');
+        // })
+
+        ulTasks.append(liItem);
+        inpTask.val('');
+    }
+    
+    btnAdd.click(addItem);
+
+    inpTask.keypress((event)=>{
+        console.log(event.which);
+        if(event.which==13)addItem();
     })
 
-    btnTrash.click(()=>{
-        console.log('clickde');
+    btnClear.click((event) => {
+       inpTask.val('');
     })
-    
-    ulTasks.append(liItem);
-    inpTask.val('');
-}) 
-});
+})
